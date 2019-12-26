@@ -4,7 +4,7 @@
 
 <!-- FIXME: Make Register banner look actually good -->
 <div class="block container-fluid bg-grey" id="business-header">
-    <a class="block-link" href="#classes">
+    <a class="block-link" href="{{url_for('courses')}}">
         <h1 class="title" id="register">Register for classes now!</h1>
     </a>
 </div>
@@ -14,7 +14,7 @@
 <!-- TODO: Find hero image -->
 <div class="block container-fluid bg-grey" id="hero">
     <div id="hero-images" >
-        <img src="static/images/EMT.jpg" class="d-block w-100" alt="...">
+        <img src="static/images/hero.jpg" class="d-block w-100" alt="...">
     </div>
 </div>
 
@@ -103,79 +103,5 @@
 
 </div>
 
-<!-- Classes Section -->
-<div class="block container-fluid bg-grey">
-    <h2 class="title">Classes</h2>
-    <h5 class="title">
-        For beginner EMR/EMT training or specialized topics contact <a class="mailto"
-            href="mailto:c3emstraining@gmail.com">c3emstraining</a>
-    </h5>
-
-    <div class="flex" id="classes">
-        <div class="card col-sm-12 col-md-12 col-lg-3">
-            <img src="static/images/c3_square.svg" width="50" height="50" class="card-img-top" alt="">
-            <div class="card-body">
-                <h5 class="card-title text-center"><strong>EMS Courses</strong></h5>
-                <p class="card-text text-center">
-                    EMR Refresher,<br>
-                    EMT Refresher,<br>
-                </p>
-            </div>
-        </div>
-
-        <div class="card col-sm-12 col-md-12 col-lg-3">
-            <img src="static/images/c3_square.svg" width="50" height="50" class="card-img-top" alt="">
-            <div class="card-body">
-                <h5 class="card-title text-center"><strong>CPR/AED/First Aid</strong></h5>
-
-                <!-- TODO: Add generic description of Adult CPR/AED/FA -->
-                <p class="card-text text-center">
-                    Adult CPR/AED/FA,<br>
-                    Adult CPR/AED,<br>
-                    Pediatric CPR/AED/FA,<br>
-                    Pediatric CPR/AED,<br>
-                    BLS Healthcare Provider,<br>
-                    First Aid
-
-                </p>
-            </div>
-        </div>
-        <div class="card col-sm-12 col-md-12 col-lg-3">
-            <img src="static/images/c3_square.svg" width="50" height="50" class="card-img-top" alt="">
-            <div class="card-body">
-                <h5 class="card-title text-center"><strong>Aquatics</strong></h5>
-
-                <!-- TODO: Add generic description of Aquatics -->
-                <p class="card-text text-center">
-                    Small Craft Safety:<br>
-                    Canoeing,<br>
-                    Kayaking,<br>
-                    Sailing,<br>
-                    Rowing,<br>
-                    Basic Water Rescue
-
-                </p>
-            </div>
-        </div>
-        <div class="card col-sm-12 col-md-12 col-lg-3">
-            <img src="static/images/c3_square.svg" width="50" height="50" class="card-img-top" alt="">
-            <div class="card-body">
-                <h5 class="card-title text-center"><strong>Other Offers</strong></h5>
-
-
-                <!-- TODO: add generic description for Other Offers -->
-                <p class="card-text text-center">
-                    Bloodborne/Airborne,<br>
-                    HazMat Awareness & Communications Refresher,<br>
-                    Fire Extinguisher Safety,<br>
-                    Specialized CME topics:<br>
-                    PEPP,<br>
-                    Smart Triage&trade;<br>
-                    DuoDote&copy; Nerve Antidote<br>
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
 
 {%endblock%}

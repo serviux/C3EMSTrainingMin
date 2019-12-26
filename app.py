@@ -1,6 +1,7 @@
 from flask import Flask, url_for, redirect, render_template, request
-application = Flask(__name__)
-
+import requests
+application = Flask(__name__, instance_relative_config=True)
+application.config.from_pyfile('config.py')
 
 @application.route("/")
 def index():
@@ -12,7 +13,17 @@ def contact():
 
 @application.route("/courses/")
 def courses():
-    return render_template("construction.html")
+    url = application.config["HOST"]
+    url += "get_all_classes?api_key="
+    url += application.config["SECRET_KEY"]
+    url += "&archived=false"
+    r = requests.get(url)
+    course_list = []
+    for course in r.json():
+        if course["catalog_category"] == "Continuing Education For EMS Professionals":
+            course_list.append(course)
+
+    return render_template("courses.html", courses= course_list, host = 'http://edu.c3emstraining.com/visitor_catalog_class/show/')
 
 @application.route("/clients/")
 def clients():
@@ -30,5 +41,5 @@ def not_found(error):
 
 if(__name__ == '__main__'):
     
-    application.run(debug= True)
+    application.run()
  

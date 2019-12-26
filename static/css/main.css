@@ -3,11 +3,15 @@ body {
   background-color: #EEEEFF;
 }
 
+textarea{
+  resize:none;
+}
+.course-btn{
+  width:100%;
+}
 /* end elements */
 
-textarea{
-    resize:none;
-}
+
 /* Backgrouds */
 .bg-blue {
   background-color: rgb(43, 43, 255);
@@ -108,6 +112,11 @@ textarea{
 
 }
 
+.course-image{
+  width: 240px !important;
+  height: 200px !important; 
+}
+
 .about-image {
   width: 100%;
   display: block;
@@ -149,12 +158,16 @@ textarea{
   width: 100%;
   padding-left: none;
   padding-right: none;
+  clear:left;
+  clear:right;
+
+  /* debugging only */
+  /* z-index: 8000; */
 }
 
 
 
 /* End Containers */
-
 
 
 /* spacing and styling */
@@ -163,7 +176,19 @@ textarea{
   transition: all 0.5;
 }
 
+.card-height{
+  height: 455px;
+  padding-bottom: 2%;
+}
 
+.course-flex{
+  display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: stretch;
+	align-content: center;
+}
 
 .flex {
   display: flex;
