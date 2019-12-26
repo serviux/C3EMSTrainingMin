@@ -1,0 +1,16 @@
+{%extends "base.html"%}
+
+{%block content%}
+<div class="course-flex">
+    {%for course in courses%}
+    <div class="card card-height" style="width: 18rem;">
+        <img class="card-img-top course-image mx-auto" src="{{course['picture']}}" alt="Card image cap">
+        <div class="card-body mx-auto">
+          <h5 class="card-title text-center">{{course['name']}}</h5>
+          <p class="card-text text-center">{{course["description"]}}</p>
+          <a href="{{host}}{{course['id']}}" class="btn btn-primary course-btn">Go to class</a>
+        </div>
+      </div>
+    {%endfor%}
+</div>
+{%endblock%}
