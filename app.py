@@ -1,7 +1,7 @@
 from flask import Flask, url_for, redirect, render_template, request
 import requests
-application = Flask(__name__, instance_relative_config=True)
-application.config.from_pyfile('config.py')
+application = Flask(__name__)
+application.config.from_pyfile('instance/config.py')
 
 @application.route("/")
 def index():
