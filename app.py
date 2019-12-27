@@ -11,7 +11,7 @@ def index():
 
 @application.route("/contact/")
 def contact():
-    return render_template("construction.html")
+    return render_template("contact.html")
 
 @application.route("/courses/")
 def courses():
