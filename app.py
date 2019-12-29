@@ -1,6 +1,8 @@
 from flask import Flask, url_for, redirect, render_template, request
 import requests
 import os
+import sys
+sys.path.insert(0, "/home/jwa95fdv5el/public_html/cgi-bin/production/lib/python3.6/site-packages")
 
 application = Flask(__name__, instance_relative_config=True)
 application.config.from_pyfile('config.py')
