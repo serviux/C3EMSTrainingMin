@@ -177,8 +177,8 @@ textarea{
 }
 
 .card-height{
-  height: 455px;
-  padding-bottom: 2%;
+  height: 30rem;
+  /* height: 455px; */
 }
 
 .course-flex{
