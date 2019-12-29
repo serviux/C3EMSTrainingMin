@@ -13,6 +13,10 @@ def index():
 def contact():
     return render_template("contact.html")
 
+@application.route("/robots.txt/")
+def robot():
+    return render_template("robots.txt")
+
 @application.route("/courses/")
 def courses():
     url = application.config["HOST"]
